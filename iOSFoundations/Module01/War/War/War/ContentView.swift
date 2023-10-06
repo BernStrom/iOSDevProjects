@@ -79,8 +79,8 @@ struct ContentView: View {
     }
     
     func deal() {
-        var playerCardValue = Int.random(in: 2...14)
-        var cpuCardValue = Int.random(in: 2...14)
+        let playerCardValue = Int.random(in: 2...14)
+        let cpuCardValue = Int.random(in: 2...14)
         
         playerCard = "card\(playerCardValue)"
         cpuCard = "card\(cpuCardValue)"
