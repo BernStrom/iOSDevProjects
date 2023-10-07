@@ -33,6 +33,7 @@ struct MovieListRow: View {
                 }
             }
         }
+        .padding()
     }
 }
 

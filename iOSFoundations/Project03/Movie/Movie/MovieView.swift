@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MovieView.swift
 //  Movie
 //
 //  Created by Bern N on 10/7/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MovieView: View {
     @State private var movieItems: [MovieItem] = [MovieItem]()
     @State private var watchedStatus = false
     var dataService = DataService()
@@ -40,5 +40,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MovieView()
 }
