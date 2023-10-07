@@ -12,6 +12,7 @@
 		7CBF61322AD06D2500257EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CBF61312AD06D2500257EA8 /* Assets.xcassets */; };
 		7CBF61352AD06D2500257EA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CBF61342AD06D2500257EA8 /* Preview Assets.xcassets */; };
 		7CBF613C2AD0720900257EA8 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF613B2AD0720900257EA8 /* MenuItem.swift */; };
+		7CD9496C2AD166EB007074FF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD9496B2AD166EB007074FF /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7CBF61312AD06D2500257EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CBF61342AD06D2500257EA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7CBF613B2AD0720900257EA8 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		7CD9496B2AD166EB007074FF /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				7CBF612D2AD06D2300257EA8 /* MenuApp.swift */,
 				7CBF612F2AD06D2300257EA8 /* MenuView.swift */,
 				7CBF613B2AD0720900257EA8 /* MenuItem.swift */,
+				7CD9496B2AD166EB007074FF /* DataService.swift */,
 				7CBF61312AD06D2500257EA8 /* Assets.xcassets */,
 				7CBF61332AD06D2500257EA8 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				7CBF613C2AD0720900257EA8 /* MenuItem.swift in Sources */,
 				7CBF61302AD06D2300257EA8 /* MenuView.swift in Sources */,
 				7CBF612E2AD06D2300257EA8 /* MenuApp.swift in Sources */,
+				7CD9496C2AD166EB007074FF /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
