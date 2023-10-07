@@ -8,7 +8,7 @@
 
 ### Movie
 
-Movie is a simple app with scrollable list of movies that contains the title's data such as name, description, rating, and more. The app consists of two different lists; list of movies to watch and movies watched.
+Movie is a simple tracker app with scrollable list of movies that contains the title's data such as name, description, rating, and more. The app consists of two different lists; list of movies to watch and movies watched.
 
 Two button sits below the list that will display the relevant list of movies, depending on which button is tapped.
 
