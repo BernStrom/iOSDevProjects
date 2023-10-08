@@ -1,6 +1,6 @@
 //
 //  DataService.swift
-//  Menu
+//  Restaurant
 //
 //  Created by Bern N on 10/7/23.
 //

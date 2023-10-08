@@ -14,9 +14,9 @@
 		7C95D3AF2AD2905200405DCA /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95D3AE2AD2905200405DCA /* AboutView.swift */; };
 		7C95D3B12AD2906400405DCA /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95D3B02AD2906400405DCA /* GalleryView.swift */; };
 		7C95D3B32AD2911400405DCA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95D3B22AD2911400405DCA /* MenuView.swift */; };
-		7C95D3B72AD2917F00405DCA /* MenuListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95D3B42AD2917F00405DCA /* MenuListRow.swift */; };
-		7C95D3B92AD2917F00405DCA /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95D3B62AD2917F00405DCA /* MenuItem.swift */; };
 		7C95D3BB2AD31B3F00405DCA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95D3BA2AD31B3F00405DCA /* DataService.swift */; };
+		7C95D3BD2AD31DBD00405DCA /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95D3BC2AD31DBD00405DCA /* MenuItem.swift */; };
+		7C95D3BF2AD31DC900405DCA /* MenuListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95D3BE2AD31DC900405DCA /* MenuListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		7C95D3AE2AD2905200405DCA /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		7C95D3B02AD2906400405DCA /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		7C95D3B22AD2911400405DCA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		7C95D3B42AD2917F00405DCA /* MenuListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuListRow.swift; path = ../../../Project02/Menu/Menu/MenuListRow.swift; sourceTree = "<group>"; };
-		7C95D3B62AD2917F00405DCA /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItem.swift; path = ../../../Project02/Menu/Menu/MenuItem.swift; sourceTree = "<group>"; };
 		7C95D3BA2AD31B3F00405DCA /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		7C95D3BC2AD31DBD00405DCA /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		7C95D3BE2AD31DC900405DCA /* MenuListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +68,8 @@
 				7C95D3B22AD2911400405DCA /* MenuView.swift */,
 				7C95D3AE2AD2905200405DCA /* AboutView.swift */,
 				7C95D3B02AD2906400405DCA /* GalleryView.swift */,
-				7C95D3B62AD2917F00405DCA /* MenuItem.swift */,
-				7C95D3B42AD2917F00405DCA /* MenuListRow.swift */,
+				7C95D3BE2AD31DC900405DCA /* MenuListRow.swift */,
+				7C95D3BC2AD31DBD00405DCA /* MenuItem.swift */,
 				7C95D3BA2AD31B3F00405DCA /* DataService.swift */,
 				7C95D3A42AD28FAD00405DCA /* Assets.xcassets */,
 				7C95D3A62AD28FAD00405DCA /* Preview Content */,
@@ -155,12 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C95D3BD2AD31DBD00405DCA /* MenuItem.swift in Sources */,
 				7C95D3B32AD2911400405DCA /* MenuView.swift in Sources */,
-				7C95D3B72AD2917F00405DCA /* MenuListRow.swift in Sources */,
 				7C95D3A32AD28FAC00405DCA /* MainView.swift in Sources */,
 				7C95D3AF2AD2905200405DCA /* AboutView.swift in Sources */,
-				7C95D3B92AD2917F00405DCA /* MenuItem.swift in Sources */,
 				7C95D3A12AD28FAC00405DCA /* RestaurantApp.swift in Sources */,
+				7C95D3BF2AD31DC900405DCA /* MenuListRow.swift in Sources */,
 				7C95D3B12AD2906400405DCA /* GalleryView.swift in Sources */,
 				7C95D3BB2AD31B3F00405DCA /* DataService.swift in Sources */,
 			);
