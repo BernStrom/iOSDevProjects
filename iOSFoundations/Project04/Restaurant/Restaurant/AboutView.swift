@@ -20,7 +20,11 @@ struct AboutView: View {
                     .aspectRatio(contentMode: .fit)
                     .padding(.bottom)
                 
-                Text("Sukiyabashi Jiro (すきやばし次郎, Sukiyabashi Jirō) is a sushi restaurant in Ginza, Chūō, Tokyo, Japan. It is owned and operated by sushi master Jiro Ono.[1] It was the first sushi restaurant in the world[2] to receive three stars from the Michelin Guide,[3] although it was removed from the Michelin Guide in November 2019 as it does not receive reservations from the general public,[4][5] instead requiring reservations to be made through the concierge of a luxury hotel.")
+                Text("""
+                    Sukiyabashi Jiro (すきやばし次郎, Sukiyabashi Jirō) is a sushi restaurant in Ginza, Chūō, Tokyo, Japan. It is owned and operated by sushi master Jiro Ono. It was the first sushi restaurant in the world to receive three stars from the Michelin Guide.
+
+                    A two-star branch operated by his son Takashi is located at Roppongi Hills in Minato, Tokyo. The late French chef Joël Robuchon said that the restaurant was one of his favorites in the world, and that it taught him that sushi is an art.
+                    """)
                 
                 Image("map")
                     .resizable()
