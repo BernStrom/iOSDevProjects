@@ -26,7 +26,8 @@ struct PhotoView: View {
                     } label: {
                         Image(systemName: "x.circle")
                             .scaleEffect(2)
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brown)
+                            .opacity(0.9)
                     }
                     .padding()
                 }

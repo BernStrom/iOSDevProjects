@@ -12,12 +12,15 @@ struct MenuView: View {
     var dataService = DataService()
     
     var body: some View {
-        List(menuItems) { item in
-            MenuListRow(item: item)
-        }
-        .listStyle(.plain)
-        .onAppear {
-            menuItems = dataService.getData()
+        NavigationStack {
+            List(menuItems) { item in
+                MenuListRow(item: item)
+            }
+            .listStyle(.plain)
+            .onAppear {
+                menuItems = dataService.getData()
+            }
+            .navigationTitle("Menu")
         }
     }
 }
