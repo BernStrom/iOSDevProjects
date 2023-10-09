@@ -16,6 +16,7 @@ struct PhotoView: View {
             Image(selectedPhoto)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .ignoresSafeArea()
             
             VStack {
                 HStack {
@@ -34,6 +35,9 @@ struct PhotoView: View {
                 Spacer()
             }
         }
+        .background(.ultraThinMaterial)
+        .presentationDetents([.medium, .large])
+        .presentationDragIndicator(.visible)
     }
 }
 
