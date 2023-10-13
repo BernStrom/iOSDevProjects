@@ -11,7 +11,7 @@ struct AttractionView: View {
     var city: City
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 ForEach(city.attractions) { attraction in
                     NavigationLink {
