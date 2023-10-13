@@ -1,35 +1,50 @@
 //
-//  AttractionView.swift
+//  CityCard.swift
 //  Guidebook
 //
-//  Created by Bern N on 10/12/23.
+//  Created by Bern N on 10/14/23.
 //
 
 import SwiftUI
 
-struct AttractionView: View {
+struct CityCard: View {
     var city: City
     
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(city.attractions) { attraction in
-                    NavigationLink {
-                        DetailView(attraction: attraction)
-                    } label: {
-                        AttractionRow(attraction: attraction)
-                            .padding(.bottom, 50)
-                    }
-                    .buttonStyle(.plain)
+        ZStack {
+            Rectangle()
+                .background {
+                    Image(city.imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
                 }
+                .foregroundStyle(.clear)
+                .cornerRadius(15)
+            
+            Rectangle()
+                .foregroundStyle(.black)
+                .opacity(0.5)
+                .cornerRadius(15)
+            
+            VStack(alignment: .leading) {
+                Text(city.name)
+                    .font(.largeTitle)
+                    .bold()
+                
+                Spacer()
+                
+                Text(city.summary)
+                    .multilineTextAlignment(.leading)
             }
             .padding()
+            .foregroundStyle(.white)
         }
+        .frame(height: 400)
     }
 }
 
 #Preview {
-    AttractionView(city: City(
+    CityCard(city: City(
         name: "Rome",
         summary: "Rome is the capital city of Italy. It is also the capital of the Lazio region, the centre of the Metropolitan City of Rome, and a special comune named Comune di Roma Capitale.",
         imageName: "rome",
