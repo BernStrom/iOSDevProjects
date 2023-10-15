@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct City: Identifiable {
-    var id = UUID()
+struct City: Identifiable, Decodable {
+    let id = UUID()
     var name: String
     var summary: String
     var imageName: String

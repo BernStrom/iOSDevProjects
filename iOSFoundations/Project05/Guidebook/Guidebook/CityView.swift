@@ -27,7 +27,7 @@ struct CityView: View {
                 .padding()
             }
             .onAppear {
-                cities = dataService.getData()
+                cities = dataService.getFileData()
             }
         }
     }

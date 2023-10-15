@@ -115,4 +115,24 @@ Originally known as Buckingham House, the building at the core of today's palace
             )
         ]
     }
+    
+    func getFileData() -> [City] {
+        if let url = Bundle.main.url(forResource: "CityData", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                
+                do {
+                    let cities = try decoder.decode([City].self, from: data)
+                    return cities
+                } catch {
+                    print("Couldn't parse JSON data: \(error)")
+                }
+            } catch {
+                print("Couldn't read file: \(error)")
+            }
+        }
+        
+        return [City]()
+    }
 }
