@@ -8,6 +8,7 @@
 import Foundation
 
 struct DataService {
+    // Method to retrieve hard-coded City data.
     func getData() -> [City] {
         return [
             City(
@@ -116,6 +117,7 @@ Originally known as Buckingham House, the building at the core of today's palace
         ]
     }
     
+    // Method to decode City data from JSON file.
     func getFileData() -> [City] {
         if let url = Bundle.main.url(forResource: "CityData", withExtension: "json") {
             do {
