@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C0A4ABA2AE3C79F00E83180 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0A4AB92AE3C79F00E83180 /* DataService.swift */; };
+		7C91AC242AE64304001E85C8 /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C91AC232AE64304001E85C8 /* TextHelper.swift */; };
 		7CB40EAB2AE3D1A80002D2CE /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB40EAA2AE3D1A80002D2CE /* BusinessSearch.swift */; };
 		7CB40EAD2AE3D1E30002D2CE /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB40EAC2AE3D1E30002D2CE /* Business.swift */; };
 		7CD6E1E92AE1593A001DAA85 /* CitysightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6E1E82AE1593A001DAA85 /* CitysightsApp.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		7C0A4AB92AE3C79F00E83180 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		7C91AC232AE64304001E85C8 /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 		7CB40EAA2AE3D1A80002D2CE /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
 		7CB40EAC2AE3D1E30002D2CE /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		7CD6E1E52AE1593A001DAA85 /* Citysights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Citysights.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C91AC222AE642EC001E85C8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7C91AC232AE64304001E85C8 /* TextHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		7CB40EA92AE3D1920002D2CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		7CD6E1E72AE1593A001DAA85 /* Citysights */ = {
 			isa = PBXGroup;
 			children = (
+				7C91AC222AE642EC001E85C8 /* Helpers */,
 				7CB40EA92AE3D1920002D2CE /* Model */,
 				7CE3344A2AE3B3C800DA8594 /* Info.plist */,
 				7CE334492AE3B29400DA8594 /* Config.xcconfig */,
@@ -162,6 +173,7 @@
 				7CB40EAB2AE3D1A80002D2CE /* BusinessSearch.swift in Sources */,
 				7CD6E1EB2AE1593A001DAA85 /* ContentView.swift in Sources */,
 				7CB40EAD2AE3D1E30002D2CE /* Business.swift in Sources */,
+				7C91AC242AE64304001E85C8 /* TextHelper.swift in Sources */,
 				7CD6E1E92AE1593A001DAA85 /* CitysightsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
