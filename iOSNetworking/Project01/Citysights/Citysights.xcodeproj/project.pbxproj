@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C0A4ABA2AE3C79F00E83180 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0A4AB92AE3C79F00E83180 /* DataService.swift */; };
 		7C91AC242AE64304001E85C8 /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C91AC232AE64304001E85C8 /* TextHelper.swift */; };
+		7C91AC262AE64C27001E85C8 /* BusinessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C91AC252AE64C27001E85C8 /* BusinessDetailView.swift */; };
 		7CB40EAB2AE3D1A80002D2CE /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB40EAA2AE3D1A80002D2CE /* BusinessSearch.swift */; };
 		7CB40EAD2AE3D1E30002D2CE /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB40EAC2AE3D1E30002D2CE /* Business.swift */; };
 		7CD6E1E92AE1593A001DAA85 /* CitysightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6E1E82AE1593A001DAA85 /* CitysightsApp.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		7C0A4AB92AE3C79F00E83180 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7C91AC232AE64304001E85C8 /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
+		7C91AC252AE64C27001E85C8 /* BusinessDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailView.swift; sourceTree = "<group>"; };
 		7CB40EAA2AE3D1A80002D2CE /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
 		7CB40EAC2AE3D1E30002D2CE /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		7CD6E1E52AE1593A001DAA85 /* Citysights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Citysights.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				7CE334492AE3B29400DA8594 /* Config.xcconfig */,
 				7CD6E1E82AE1593A001DAA85 /* CitysightsApp.swift */,
 				7CD6E1EA2AE1593A001DAA85 /* ContentView.swift */,
+				7C91AC252AE64C27001E85C8 /* BusinessDetailView.swift */,
 				7C0A4AB92AE3C79F00E83180 /* DataService.swift */,
 				7CD6E1EC2AE1593B001DAA85 /* Assets.xcassets */,
 				7CD6E1EE2AE1593B001DAA85 /* Preview Content */,
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C0A4ABA2AE3C79F00E83180 /* DataService.swift in Sources */,
+				7C91AC262AE64C27001E85C8 /* BusinessDetailView.swift in Sources */,
 				7CB40EAB2AE3D1A80002D2CE /* BusinessSearch.swift in Sources */,
 				7CD6E1EB2AE1593A001DAA85 /* ContentView.swift in Sources */,
 				7CB40EAD2AE3D1E30002D2CE /* Business.swift in Sources */,
