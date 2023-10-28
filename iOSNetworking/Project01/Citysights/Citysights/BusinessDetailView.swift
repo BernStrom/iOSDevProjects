@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct BusinessDetailView: View {
-    var business: Business?
+    @Environment(BusinessModel.self) private var model
     
     var body: some View {
+        let business = model.selectedBusiness
+        
         VStack(spacing: 0) {
             ZStack(alignment: . trailing) {
                 Image("detail-placeholder-image")
