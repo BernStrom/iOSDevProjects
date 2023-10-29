@@ -13,7 +13,7 @@ struct CitysightsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
                 .environment(model)
         }
     }
