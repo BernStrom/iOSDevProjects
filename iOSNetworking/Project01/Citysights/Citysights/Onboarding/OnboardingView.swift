@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Environment(BusinessModel.self) private var model
     @Environment(\.dismiss) private var dismiss
     @State private var selectedViewIndex = 0
     
@@ -29,6 +30,7 @@ struct OnboardingView: View {
                 .ignoresSafeArea()
                 
                 OnboardingViewDetails(bgColor: Color(red: 139/255, green: 166/255, blue: 65/255), headline: "Discover Your City", subHeadline: "We'll show you the best restaurants, venues, and more, based on your location.") {
+                    model.getUserLocation()
                     dismiss()
                 }
                 .tag(1)
@@ -61,4 +63,5 @@ struct OnboardingView: View {
 
 #Preview {
     OnboardingView()
+        .environment(BusinessModel())
 }

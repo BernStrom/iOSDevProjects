@@ -6,16 +6,27 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct DataService {
     let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String
     
-    func businessSearch() async -> [Business] {
+    func businessSearch(userLocation: CLLocationCoordinate2D?) async -> [Business] {
         guard apiKey != nil else {
             return [Business]()
         }
         
-        if let url = URL(string: "https://api.yelp.com/v3/businesses/search?latitude=37.785834&longitude=-122.406417&categories=restaurants&limit=10") {
+        // Default latitude & longitude
+        var lat = 37.785834
+        var long = -122.406417
+        
+        // User's latitude & longitude
+        if let userLocation {
+            lat = userLocation.latitude
+            long = userLocation.longitude
+        }
+        
+        if let url = URL(string: "https://api.yelp.com/v3/businesses/search?latitude=\(lat)&longitude=\(long)&categories=restaurants&limit=10") {
             
             var request = URLRequest(url: url)
             request.addValue("Bearer \(apiKey!)", forHTTPHeaderField: "Authorization")
