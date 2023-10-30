@@ -10,11 +10,17 @@ import SwiftUI
 @main
 struct CitysightsApp: App {
     @State private var model = BusinessModel()
+    @AppStorage("onboarding") private var needsOnboarding = true
     
     var body: some Scene {
         WindowGroup {
             HomeView()
                 .environment(model)
+                .fullScreenCover(isPresented: $needsOnboarding) {
+                    needsOnboarding = false
+                } content: {
+                    OnboardingView()
+                }
         }
     }
 }
