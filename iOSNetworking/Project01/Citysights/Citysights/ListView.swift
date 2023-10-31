@@ -43,7 +43,7 @@ struct ListView: View {
                         
                         Spacer()
                         
-                        Image("regular_\(business.rating ?? 0)")
+                        Image("regular_\(business.rating ?? 0.0)")
                     }
                     
                     Divider()
