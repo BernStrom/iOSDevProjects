@@ -102,8 +102,6 @@
 				7C91AC222AE642EC001E85C8 /* Helpers */,
 				7CB40EA92AE3D1920002D2CE /* Model */,
 				7CA414FF2AEFB2F90067002F /* Onboarding */,
-				7CE3344A2AE3B3C800DA8594 /* Info.plist */,
-				7CE334492AE3B29400DA8594 /* Config.xcconfig */,
 				7CD6E1E82AE1593A001DAA85 /* CitysightsApp.swift */,
 				7CD6E1EA2AE1593A001DAA85 /* HomeView.swift */,
 				7C7333A12AEE7444005280DB /* MapView.swift */,
@@ -111,6 +109,8 @@
 				7C91AC252AE64C27001E85C8 /* BusinessDetailView.swift */,
 				7C9EFD0C2AED64E1008C0B1E /* BusinessModel.swift */,
 				7C0A4AB92AE3C79F00E83180 /* DataService.swift */,
+				7CE3344A2AE3B3C800DA8594 /* Info.plist */,
+				7CE334492AE3B29400DA8594 /* Config.xcconfig */,
 				7CD6E1EC2AE1593B001DAA85 /* Assets.xcassets */,
 				7CD6E1EE2AE1593B001DAA85 /* Preview Content */,
 			);
