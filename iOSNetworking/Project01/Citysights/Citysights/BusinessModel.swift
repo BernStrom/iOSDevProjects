@@ -18,6 +18,8 @@ final class BusinessModel: NSObject, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var currentUserLocation: CLLocationCoordinate2D?
     
+    var locationAuthStatus: CLAuthorizationStatus = .notDetermined
+    
     override init() {
         super.init()
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -44,6 +46,8 @@ final class BusinessModel: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        self.locationAuthStatus = manager.authorizationStatus
+        
         if manager.authorizationStatus == .authorizedWhenInUse {
             currentUserLocation = nil
             manager.requestLocation()
