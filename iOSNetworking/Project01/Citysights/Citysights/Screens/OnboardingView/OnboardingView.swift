@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @Environment(BusinessModel.self) private var model
+    @Environment(BusinessViewModel.self) private var model
     @Environment(\.dismiss) private var dismiss
     @State private var selectedViewIndex = 0
     
@@ -63,5 +63,5 @@ struct OnboardingView: View {
 
 #Preview {
     OnboardingView()
-        .environment(BusinessModel())
+        .environment(BusinessViewModel())
 }

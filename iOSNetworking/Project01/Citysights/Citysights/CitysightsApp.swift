@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct CitysightsApp: App {
-    @State private var model = BusinessModel()
+    @State private var model = BusinessViewModel()
     @AppStorage("onboarding") private var needsOnboarding = true
     
     var body: some Scene {

@@ -1,5 +1,5 @@
 //
-//  BusinessModel.swift
+//  BusinessViewModel.swift
 //  Citysights
 //
 //  Created by Bern N on 10/28/23.
@@ -9,7 +9,7 @@ import SwiftUI
 import CoreLocation
 
 @Observable
-final class BusinessModel: NSObject, CLLocationManagerDelegate {
+final class BusinessViewModel: NSObject, CLLocationManagerDelegate {
     
     var businesses = [Business]()
     var selectedBusiness: Business?
