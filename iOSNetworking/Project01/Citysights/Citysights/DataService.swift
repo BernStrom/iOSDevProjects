@@ -53,6 +53,7 @@ struct DataService {
                 let decoder = JSONDecoder()
                 let result = try decoder.decode(BusinessSearch.self, from: data)
                 
+                print(response.url ?? "API endpoint URL response not found")
                 return result.businesses
             } catch {
                 print(error)
