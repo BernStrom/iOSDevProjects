@@ -64,7 +64,7 @@ struct BusinessDetailView: View {
                     Text("\(business?.location?.state ?? ""), \(business?.location?.zipCode ?? ""), \(business?.location?.country ?? "")")
                         .padding(.bottom, 10)
                     
-                    Image("regular_\(business?.rating ?? 0)")
+                    Image("regular_\(business?.rating ?? 0.0)")
                         .padding(.bottom, 16)
                     
                     Divider()
@@ -77,7 +77,9 @@ struct BusinessDetailView: View {
                                 Text(business?.phone ?? "")
                             }
                         } else {
-                            Text(business?.phone ?? "")
+                            Text(business?.phone ?? "No number provided")
+                                .italic()
+                                .foregroundStyle(.gray)
                         }
                         
                         Spacer()
@@ -97,8 +99,10 @@ struct BusinessDetailView: View {
                                     .lineLimit(1)
                             }
                         } else {
-                            Text(business?.url ?? "")
+                            Text(business?.url ?? "No link provided")
                                 .lineLimit(1)
+                                .italic()
+                                .foregroundStyle(.gray)
                         }
                         
                         Spacer()
