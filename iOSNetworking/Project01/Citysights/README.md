@@ -1,4 +1,4 @@
-![Header Banner](DocAssets/HeaderBanner.png)
+![Header Banner](DocAssets/HeaderBanner.svg)
 
 <p align="center">
     <a href="https://developer.apple.com/ios/">
@@ -56,4 +56,4 @@ For viewing any specific location from your search result, simply tap on any bus
 
 Swift, SwiftUI, Xcode, SF Symbols, Cocoa Touch, Safari, App Store, iPhone & iOS, iPad & iPadOS, Apple Watch & watchOS, Apple TV & tvOS, Mac & macOS and their logos are trademarks of Apple Inc., registered in the U.S. and other countries.
 
-![Footer Banner](DocAssets/FooterBanner.png)
+![Footer Banner](DocAssets/FooterBanner.svg)
