@@ -2,7 +2,7 @@
 
 ## About the app
 
-### Movie
+### Restaurant
 
 Restaurant is a sushi restaurant app that contains multiple screens about the details of the restaurant. It consists of tab bar that allow users to navigate between the different screens, with one of the screens containing a gallery view of the restaurant's food.
 
