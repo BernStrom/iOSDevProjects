@@ -32,11 +32,29 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // Get a card cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         
-        // TODO: Configure the card cell
+        // Get the card from the card list
+        let card = cardsList[indexPath.row]
+        
+        // Configure the card cell
+        cell.configureCell(card: card)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Get a reference to the card cell that was tapped
+        let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
+        
+        // Check the card flipped state to determine how to flip it
+        if cell?.card?.isFlipped == false {
+            // Flips the front of the card facing up
+            cell?.flipUp()
+        } else {
+            // Flips the front of the card facing down
+            cell?.flipDown()
+        }
     }
 
 }
