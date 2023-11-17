@@ -11,21 +11,20 @@ class CardModel {
     
     func getCards() -> [Card] {
         var generatedCards = [Card]()
+        var generatedNumbers = [Int]()
         
         repeat {
             let randomNumber = Int.random(in: 1...13)
-            let cardOne = Card()
-            let cardTwo = Card()
             
-            cardOne.imageName = "card\(randomNumber)"
-            cardTwo.imageName = "card\(randomNumber)"
-            
-            let hasDuplicateCardPairs = generatedCards.contains {
-                $0.imageName == cardOne.imageName
-            }
-            
-            if hasDuplicateCardPairs != true {
+            if generatedNumbers.contains(randomNumber) == false {
+                let cardOne = Card()
+                let cardTwo = Card()
+                
+                cardOne.imageName = "card\(randomNumber)"
+                cardTwo.imageName = "card\(randomNumber)"
+                
                 generatedCards += [cardOne, cardTwo]
+                generatedNumbers.append(randomNumber)
             }
         } while (generatedCards.count < 16)
         
