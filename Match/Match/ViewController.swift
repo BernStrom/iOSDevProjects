@@ -11,8 +11,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var timerLabel: UILabel!
+    
     let model = CardModel()
     var cardsList = [Card]()
+    
+    var timer: Timer?
+    var milliseconds: Int = 30 * 1000
     
     var firstFlippedCardIndex: IndexPath?
 
@@ -23,6 +28,29 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerFired), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer!, forMode: .common)
+    }
+    
+    // MARK: - Timer Methods
+    
+    @objc func timerFired() {
+        // Decrement the counter
+        milliseconds -= 1
+        
+        // Update the timer label
+        let seconds: Double = Double(milliseconds) / 1000.0
+        timerLabel.text = String(format: "Time Remaining: %.2f", seconds)
+        
+        // Stop the timer if it reaches zero
+        if milliseconds == 0 {
+            timerLabel.textColor = UIColor.red
+            timer?.invalidate()
+            
+            // Check if user cleared all card pairs
+            checkForGameEnd()
+        }
     }
     
     // MARK: - Collection View Delegate Methods
@@ -91,6 +119,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             // Remove the matched cards 
             cardOneCell?.remove()
             cardTwoCell?.remove()
+            
+            // Check if the matched card was the last pair
+            checkForGameEnd()
         } else {
             // Set the card flipped state
             cardOne.isFlipped = false
@@ -103,6 +134,42 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Reset the firstFlippedCardIndex property
         firstFlippedCardIndex = nil
+    }
+    
+    func checkForGameEnd() {
+        // Set the default user win state
+        var hasWon = true
+        
+        for card in cardsList {
+            // Check for any un-matched cards
+            if card.isMatched == false {
+                hasWon = false
+                break
+            }
+        }
+        
+        if hasWon {
+            // Stop the timer and show an alert popup to indicate user has won
+            timer?.invalidate()
+            showAlert(title: "Congratulations", message: "You've won the game! 🥳")
+        } else {
+            // Check first if there's any time left, if user hasn't won the game yet
+            if milliseconds <= 0 {
+                showAlert(title: "Time's Up", message: "Sorry, better luck next time! 😛")
+            }
+        }
+    }
+    
+    func showAlert(title: String, message: String) {
+        // Create an alert popup and dismiss action button
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Ok", style: .default)
+        
+        // Add an "Ok" button for the user to dismiss the alert popup
+        alert.addAction(dismissAction)
+        
+        // Show the alert popup
+        present(alert, animated: true)
     }
 
 }
