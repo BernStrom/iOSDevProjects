@@ -8,7 +8,7 @@
 import Foundation
 
 protocol QuizProtocol {
-    func questionsRetrieved(_ question: [Question])
+    func questionsRetrieved(_ questions: [Question])
 }
 
 class QuizModel {
