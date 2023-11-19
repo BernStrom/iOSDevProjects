@@ -24,8 +24,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIg-dJ-Ogd">
                                         <rect key="frame" x="20" y="0.0" width="353" height="426"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MKb-cb-8mk">
@@ -123,13 +123,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ck-CF-cO9">
-                                                <rect key="frame" x="86" y="153" width="41.333333333333343" height="153"/>
+                                                <rect key="frame" x="0.0" y="153" width="213" height="153"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBf-xQ-Cfg">
-                                                <rect key="frame" x="69" y="306" width="75" height="153"/>
+                                                <rect key="frame" x="0.0" y="306" width="213" height="153"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                                 <connections>
@@ -138,8 +138,8 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="tBf-xQ-Cfg" firstAttribute="width" secondItem="nOj-gV-AI9" secondAttribute="width" multiplier="0.352113" id="7JW-bC-HRT"/>
-                                            <constraint firstItem="4Ck-CF-cO9" firstAttribute="width" secondItem="nOj-gV-AI9" secondAttribute="width" multiplier="0.194053" id="EjB-Fw-plS"/>
+                                            <constraint firstItem="tBf-xQ-Cfg" firstAttribute="width" secondItem="nOj-gV-AI9" secondAttribute="width" id="7JW-bC-HRT"/>
+                                            <constraint firstItem="4Ck-CF-cO9" firstAttribute="width" secondItem="nOj-gV-AI9" secondAttribute="width" id="EjB-Fw-plS"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
