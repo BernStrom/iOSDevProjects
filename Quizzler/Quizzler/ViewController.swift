@@ -51,6 +51,21 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
     func questionsRetrieved(_ questions: [Question]) {
         self.questions = questions
         
+        // Check whether to restore the quiz state from UserDefaults storage before showing the first question
+        let savedIndex = StateManager.retrieveValue(key: StateManager.questionIndexKey) as? Int
+        
+        if savedIndex != nil && savedIndex! < self.questions.count {
+            // Set the current question to display the saved question in UserDefaults storage
+            currentQuestionIndex = savedIndex!
+            
+            // Retrieve the number of correct answers from UserDefaults storage
+            let savedNumCorrect = StateManager.retrieveValue(key: StateManager.numCorrectKey) as? Int
+            
+            if savedNumCorrect != nil {
+                numCorrect = savedNumCorrect!
+            }
+        }
+        
         // Display the first question
         displayQuestion()
     }
@@ -127,6 +142,9 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
                 resultDialog?.buttonText = "Restart"
                 
                 present(resultDialog!, animated: true)
+                
+                // Clear the quiz state from UserDefaults storage at the end of the last question
+                StateManager.clearState()
             }
         } else if currentQuestionIndex > questions.count {
             // Restart quiz
@@ -136,6 +154,8 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
         } else if currentQuestionIndex < questions.count {
             // Display the next question
             displayQuestion()
+            
+            StateManager.saveState(numCorrect: numCorrect, questionIndex: currentQuestionIndex)
         }
     }
 

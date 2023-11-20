@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C9A57842B0B29050026962F /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9A57832B0B29050026962F /* StateManager.swift */; };
 		7CB663002B0A833E00196A73 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB662FF2B0A833E00196A73 /* ResultViewController.swift */; };
 		7CB89AB72B088FF500E4930D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB89AB62B088FF500E4930D /* AppDelegate.swift */; };
 		7CB89AB92B088FF500E4930D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB89AB82B088FF500E4930D /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C9A57832B0B29050026962F /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 		7CB662FF2B0A833E00196A73 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		7CB89AB32B088FF500E4930D /* Quizzler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB89AB62B088FF500E4930D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				7CB89ACC2B08909F00E4930D /* QuizModel.swift */,
 				7CB89ABA2B088FF500E4930D /* ViewController.swift */,
 				7CB662FF2B0A833E00196A73 /* ResultViewController.swift */,
+				7C9A57832B0B29050026962F /* StateManager.swift */,
 				7CB89AB62B088FF500E4930D /* AppDelegate.swift */,
 				7CB89AB82B088FF500E4930D /* SceneDelegate.swift */,
 				7CB89ACE2B089FA100E4930D /* QuestionData.json */,
@@ -154,6 +157,7 @@
 				7CB89ABB2B088FF500E4930D /* ViewController.swift in Sources */,
 				7CB89ACB2B08901500E4930D /* Question.swift in Sources */,
 				7CB89AB72B088FF500E4930D /* AppDelegate.swift in Sources */,
+				7C9A57842B0B29050026962F /* StateManager.swift in Sources */,
 				7CB89AB92B088FF500E4930D /* SceneDelegate.swift in Sources */,
 				7CB89ACD2B08909F00E4930D /* QuizModel.swift in Sources */,
 				7CB663002B0A833E00196A73 /* ResultViewController.swift in Sources */,
