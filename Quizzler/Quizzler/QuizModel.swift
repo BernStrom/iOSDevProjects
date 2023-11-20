@@ -17,7 +17,7 @@ class QuizModel {
     
     func getQuestions() {
         // Fetch quiz questions
-        getLocalJsonData()
+        getRemoteJsonData()
     }
     
     func getLocalJsonData() {
@@ -43,7 +43,32 @@ class QuizModel {
     }
     
     func getRemoteJsonData() {
+        let url = URL(string: "https://codewithchris.com/code/QuestionData.json")
         
+        guard url != nil else {
+            print("Couldn't create the URL object from the URL path")
+            return
+        }
+        
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: url!) { data, response, error in
+            if error == nil && data != nil {
+                do {
+                    let decoder = JSONDecoder()
+                    let questionsList = try decoder.decode([Question].self, from: data!)
+                    
+                    // Use the main thread to notify the view controller to update the UI
+                    DispatchQueue.main.async {
+                        self.delegate?.questionsRetrieved(questionsList)
+                    }
+                } catch {
+                    print("Couldn't read data from remote API at given URL path.")
+                }
+            }
+        }
+        
+        dataTask.resume()
     }
     
 }
