@@ -123,7 +123,10 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
             resultDialog?.feedbackText = question.feedback!
             resultDialog?.buttonText = "Next"
             
-            present(resultDialog!, animated: true)
+            // Use the main thread to notify the view controller to update the UI
+            DispatchQueue.main.async {
+                self.present(self.resultDialog!, animated: true)
+            }
         }
     }
     
