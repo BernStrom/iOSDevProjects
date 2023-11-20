@@ -13,6 +13,12 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var stackViewLeadingConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var stackViewTrailingConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var rootStackView: UIStackView!
+    
     var model = QuizModel()
     var questions = [Question]()
     var currentQuestionIndex = 0
@@ -34,6 +40,38 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
         model.getQuestions()
     }
     
+    func slideInQuestion() {
+        // Set the initial animation state
+        stackViewTrailingConstraint.constant = -1000
+        stackViewLeadingConstraint.constant = 1000
+        rootStackView.alpha = 0
+        view.layoutIfNeeded()
+        
+        // Slide in animation for the question
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
+            self.stackViewLeadingConstraint.constant = 0
+            self.stackViewTrailingConstraint.constant = 0
+            self.rootStackView.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func slideOutQuestion() {
+        // Set the initial animation state
+        stackViewTrailingConstraint.constant = 0
+        stackViewLeadingConstraint.constant = 0
+        rootStackView.alpha = 1
+        view.layoutIfNeeded()
+        
+        // Slide out animation for the question
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
+            self.stackViewLeadingConstraint.constant = -1000
+            self.stackViewTrailingConstraint.constant = 1000
+            self.rootStackView.alpha = 0
+            self.view.layoutIfNeeded()
+        }
+    }
+    
     func displayQuestion() {
         guard questions.count > 0 && currentQuestionIndex < questions.count else {
             return
@@ -44,6 +82,11 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
         
         // Reload the answers table
         tableView.reloadData()
+        
+        // Run the question slide in animation on the main thread
+        DispatchQueue.main.async {
+            self.slideInQuestion()
+        }
     }
     
     // MARK: - QuizProtocol Methods
@@ -114,6 +157,11 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
             numCorrect += 1
         } else {
             titleText = "Incorrect!"
+        }
+        
+        // Run the question slide out animation on the main thread
+        DispatchQueue.main.async {
+            self.slideOutQuestion()
         }
         
         // Display the result modal window
