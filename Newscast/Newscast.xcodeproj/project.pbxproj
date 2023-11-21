@@ -16,6 +16,7 @@
 		7C3ECC842B0C9F3D00B436BE /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3ECC832B0C9F3D00B436BE /* Article.swift */; };
 		7C3ECC862B0CA0E900B436BE /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3ECC852B0CA0E900B436BE /* ArticleService.swift */; };
 		7C3ECC882B0CA14400B436BE /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3ECC872B0CA14400B436BE /* ArticleModel.swift */; };
+		7C3ECC8B2B0CBEAD00B436BE /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C3ECC8A2B0CBEAD00B436BE /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7C3ECC832B0C9F3D00B436BE /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		7C3ECC852B0CA0E900B436BE /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		7C3ECC872B0CA14400B436BE /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		7C3ECC8A2B0CBEAD00B436BE /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				7C3ECC782B0C9F1400B436BE /* Assets.xcassets */,
 				7C3ECC7A2B0C9F1400B436BE /* LaunchScreen.storyboard */,
 				7C3ECC7D2B0C9F1400B436BE /* Info.plist */,
+				7C3ECC8A2B0CBEAD00B436BE /* Config.xcconfig */,
 			);
 			path = Newscast;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3ECC8B2B0CBEAD00B436BE /* Config.xcconfig in Resources */,
 				7C3ECC7C2B0C9F1400B436BE /* LaunchScreen.storyboard in Resources */,
 				7C3ECC792B0C9F1400B436BE /* Assets.xcassets in Resources */,
 				7C3ECC772B0C9F1300B436BE /* Main.storyboard in Resources */,
