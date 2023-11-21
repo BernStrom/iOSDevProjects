@@ -17,6 +17,7 @@
 		7C3ECC862B0CA0E900B436BE /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3ECC852B0CA0E900B436BE /* ArticleService.swift */; };
 		7C3ECC882B0CA14400B436BE /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3ECC872B0CA14400B436BE /* ArticleModel.swift */; };
 		7C3ECC8B2B0CBEAD00B436BE /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C3ECC8A2B0CBEAD00B436BE /* Config.xcconfig */; };
+		7C9FEF112B0D098300F03161 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9FEF102B0D098300F03161 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7C3ECC852B0CA0E900B436BE /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		7C3ECC872B0CA14400B436BE /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		7C3ECC8A2B0CBEAD00B436BE /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		7C9FEF102B0D098300F03161 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				7C3ECC852B0CA0E900B436BE /* ArticleService.swift */,
 				7C3ECC872B0CA14400B436BE /* ArticleModel.swift */,
 				7C3ECC732B0C9F1300B436BE /* ViewController.swift */,
+				7C9FEF102B0D098300F03161 /* DetailViewController.swift */,
 				7C3ECC6F2B0C9F1300B436BE /* AppDelegate.swift */,
 				7C3ECC712B0C9F1300B436BE /* SceneDelegate.swift */,
 				7C3ECC752B0C9F1300B436BE /* Main.storyboard */,
@@ -157,6 +160,7 @@
 				7C3ECC702B0C9F1300B436BE /* AppDelegate.swift in Sources */,
 				7C3ECC882B0CA14400B436BE /* ArticleModel.swift in Sources */,
 				7C3ECC722B0C9F1300B436BE /* SceneDelegate.swift in Sources */,
+				7C9FEF112B0D098300F03161 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
