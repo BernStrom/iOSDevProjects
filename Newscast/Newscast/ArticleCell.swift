@@ -25,12 +25,17 @@ class ArticleCell: UITableViewCell {
         headlineLabel.text = articleToDisplay!.title
         
         guard articleToDisplay!.urlToImage != nil else {
-//            print("Article image URL not found")
             return
         }
         
         // Get a reference to the article image URL
         let urlString = articleToDisplay!.urlToImage!
+        
+        // Check the CacheManager before downloading any image data
+        if let imageData = CacheManager.retrievedData(urlString) {
+            articleImageView.image = UIImage(data: imageData)
+            return
+        }
         
         let url = URL(string: urlString)
         
@@ -43,6 +48,9 @@ class ArticleCell: UITableViewCell {
         
         let dataTask = session.dataTask(with: url!) { data, response, error in
             if error == nil && data != nil {
+                // Save the data into cache
+                CacheManager.savedData(urlString, data!)
+                
                 // Check if the image URL string matches the article image URL of the cell that is set to display
                 if self.articleToDisplay!.urlToImage == urlString {
                     // Update the UI with article images on the main thread

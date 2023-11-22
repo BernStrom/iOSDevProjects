@@ -18,6 +18,7 @@
 		7C3ECC882B0CA14400B436BE /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3ECC872B0CA14400B436BE /* ArticleModel.swift */; };
 		7C9FEF112B0D098300F03161 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9FEF102B0D098300F03161 /* DetailViewController.swift */; };
 		7CE04E9E2B0DDFC500768FA4 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE04E9D2B0DDFC500768FA4 /* ArticleCell.swift */; };
+		7CE04EA12B0E7E7D00768FA4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE04EA02B0E7E7D00768FA4 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		7C9FEF102B0D098300F03161 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7CE04E9D2B0DDFC500768FA4 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		7CE04E9F2B0DF12C00768FA4 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		7CE04EA02B0E7E7D00768FA4 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				7C3ECC832B0C9F3D00B436BE /* Article.swift */,
 				7C3ECC852B0CA0E900B436BE /* ArticleService.swift */,
 				7C3ECC872B0CA14400B436BE /* ArticleModel.swift */,
+				7CE04EA02B0E7E7D00768FA4 /* CacheManager.swift */,
 				7CE04E9D2B0DDFC500768FA4 /* ArticleCell.swift */,
 				7C3ECC732B0C9F1300B436BE /* ViewController.swift */,
 				7C9FEF102B0D098300F03161 /* DetailViewController.swift */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CE04E9E2B0DDFC500768FA4 /* ArticleCell.swift in Sources */,
+				7CE04EA12B0E7E7D00768FA4 /* CacheManager.swift in Sources */,
 				7C3ECC862B0CA0E900B436BE /* ArticleService.swift in Sources */,
 				7C3ECC842B0C9F3D00B436BE /* Article.swift in Sources */,
 				7C3ECC742B0C9F1300B436BE /* ViewController.swift in Sources */,
