@@ -12,10 +12,27 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     
+    var articleUrl: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Check that it contains an article URL
+        if articleUrl != nil {
+            let url = URL(string: articleUrl!)
+            
+            guard url != nil else {
+                print("DetailViewController: - Couldn't create the URL object from the article URL path")
+                return
+            }
+            
+            let request = URLRequest(url: url!)
+            
+            // Load the full article page into web view
+            webView.load(request)
+        }
     }
     
 
