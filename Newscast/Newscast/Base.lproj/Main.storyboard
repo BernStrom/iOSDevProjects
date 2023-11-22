@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="dkU-qI-A4m">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="dkU-qI-A4m" customClass="ArticleCell" customModule="Newscast" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dkU-qI-A4m" id="sh8-eE-Yyk">
@@ -33,7 +33,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vef-we-rB4">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vef-we-rB4">
                                                     <rect key="frame" x="275" y="0.0" width="118" height="100"/>
                                                 </imageView>
                                             </subviews>
@@ -50,6 +50,10 @@
                                             <constraint firstItem="At4-bi-zTG" firstAttribute="width" secondItem="dkU-qI-A4m" secondAttribute="width" multiplier="0.7" constant="-40" id="TjH-3R-AmB"/>
                                             <constraint firstItem="vef-we-rB4" firstAttribute="width" secondItem="dkU-qI-A4m" secondAttribute="width" multiplier="0.3" id="axI-uv-zvi"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="articleImageView" destination="vef-we-rB4" id="pOX-a6-jPR"/>
+                                            <outlet property="headlineLabel" destination="At4-bi-zTG" id="2ov-oO-vvL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
