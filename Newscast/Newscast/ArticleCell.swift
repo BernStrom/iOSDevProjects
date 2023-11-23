@@ -16,13 +16,21 @@ class ArticleCell: UITableViewCell {
     var articleToDisplay: Article?
     
     func displayArticle(_ article: Article) {
-        // Reset the table cell before displaying the next article
+        // Reset the table cell contents before displaying the next article
+        // Set initial table cell contents alpha values to 0 to prepare for animations
         headlineLabel.text = ""
+        headlineLabel.alpha = 0
         articleImageView.image = nil
+        articleImageView.alpha = 0
         
         articleToDisplay = article
         
         headlineLabel.text = articleToDisplay!.title
+        
+        // Animate the headline label with a fade effect into view
+        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut) {
+            self.headlineLabel.alpha = 1
+        }
         
         guard articleToDisplay!.urlToImage != nil else {
             return
@@ -33,7 +41,14 @@ class ArticleCell: UITableViewCell {
         
         // Check the CacheManager before downloading any image data
         if let imageData = CacheManager.retrievedData(urlString) {
+            // Set the article image with the image data from the cache
             articleImageView.image = UIImage(data: imageData)
+            
+            // Animate the article image with a fade effect into view
+            UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut) {
+                self.articleImageView.alpha = 1
+            }
+            
             return
         }
         
@@ -56,6 +71,11 @@ class ArticleCell: UITableViewCell {
                     // Update the UI with article images on the main thread
                     DispatchQueue.main.async {
                         self.articleImageView.image = UIImage(data: data!)
+                        
+                        // Animate the article image with a fade effect into view
+                        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut) {
+                            self.articleImageView.alpha = 1
+                        }
                     }
                 }
             }
