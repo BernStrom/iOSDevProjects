@@ -93,11 +93,16 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Fow-Dv-zqa">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BgI-Zi-ki5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Fow-Dv-zqa" firstAttribute="centerY" secondItem="RNu-tR-Eq9" secondAttribute="centerY" id="By5-0N-llL"/>
                             <constraint firstAttribute="bottom" secondItem="cza-41-Lid" secondAttribute="bottom" id="Iy6-z4-Is7"/>
+                            <constraint firstItem="Fow-Dv-zqa" firstAttribute="centerX" secondItem="RNu-tR-Eq9" secondAttribute="centerX" id="L7D-2S-pnn"/>
                             <constraint firstItem="cza-41-Lid" firstAttribute="leading" secondItem="RNu-tR-Eq9" secondAttribute="leading" id="U8m-tT-cPv"/>
                             <constraint firstItem="cza-41-Lid" firstAttribute="top" secondItem="RNu-tR-Eq9" secondAttribute="top" id="XGv-cR-78A"/>
                             <constraint firstAttribute="trailing" secondItem="cza-41-Lid" secondAttribute="trailing" id="g8O-ti-4EJ"/>
@@ -105,6 +110,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GwO-sj-n67"/>
                     <connections>
+                        <outlet property="spinner" destination="Fow-Dv-zqa" id="zX8-UT-VXY"/>
                         <outlet property="webView" destination="cza-41-Lid" id="euM-pX-nYA"/>
                     </connections>
                 </viewController>

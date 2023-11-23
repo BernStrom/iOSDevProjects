@@ -12,10 +12,14 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     var articleUrl: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        webView.navigationDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +33,10 @@ class DetailViewController: UIViewController {
             }
             
             let request = URLRequest(url: url!)
+            
+            // Start the spinner loading animation
+            spinner.alpha = 1
+            spinner.startAnimating()
             
             // Load the full article page into web view
             webView.load(request)
@@ -46,4 +54,14 @@ class DetailViewController: UIViewController {
     }
     */
 
+}
+
+extension DetailViewController: WKNavigationDelegate {
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        // Stop the spinner loading animation and hide it from view
+        spinner.stopAnimating()
+        spinner.alpha = 0
+    }
+    
 }
